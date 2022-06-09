@@ -40,7 +40,18 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 /*==================== SHOW SCROLL UP ====================*/ 
+function scrollUp() {
+	const scrollUp = document.getElementById('scroll-up');
 
+	if(this.scrollY >= 200) {
+		console.log('Show');
+		scrollUp.classList.add('show-scroll');
+	} else {
+		scrollUp.classList.remove('show-scroll');
+	}
+}
+
+window.addEventListener('scroll', scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
